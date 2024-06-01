@@ -1,5 +1,44 @@
 body {
     font-family: Arial, sans-serif;
+    padding-top: 56px; /* Offset for the fixed navbar */
+}
+
+.navbar {
+    padding: 10px 20px;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: white;
+    margin-right: 20px;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: #ddd;
+}
+
+header {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+header p {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+}
+
+header button {
+    font-size: 1.25rem;
+    padding: 10px 20px;
 }
 
 .card {
@@ -11,23 +50,21 @@ body {
     border-top-right-radius: 10px;
 }
 
-.navbar-nav .nav-item .nav-link {
-    color: white;
-    margin-right: 10px;
+.card-title {
+    font-size: 1.25rem;
 }
 
-.navbar-nav .nav-item .nav-link:hover {
-    color: gray;
+.card-text {
+    font-size: 1rem;
 }
 
 footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-}
-
-section {
-    padding: 60px 0;
+    padding: 10px 0;
+    background-color: #343a40;
+    color: white;
 }
 
 #services, #locations, #experts {
