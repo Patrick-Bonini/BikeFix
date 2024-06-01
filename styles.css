@@ -1,77 +1,24 @@
 body {
-    font-family: Arial, sans-serif;
-    padding-top: 56px; /* Offset for the fixed navbar */
+    padding-top: 70px;
+    /* Ensure no whitespace above the navbar */
 }
 
 .navbar {
-    padding: 10px 20px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 1rem;
 }
 
-.navbar-brand {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: white !important;
+.header {
+    padding: 2rem 0;
 }
 
-.navbar-nav .nav-item .nav-link {
-    color: white;
-    margin-right: 20px;
-    font-size: 1rem;
-    font-weight: 500;
+.footer {
+    padding: 1rem 0;
 }
 
-.navbar-nav .nav-item .nav-link:hover {
-    color: #ddd;
+html {
+    scroll-behavior: smooth;
 }
 
-header {
-    padding: 60px 0;
-    background-color: #f8f9fa;
-}
-
-header h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-}
-
-header p {
-    font-size: 1.25rem;
-    margin-bottom: 20px;
-}
-
-header button {
-    font-size: 1.25rem;
-    padding: 10px 20px;
-    border-radius: 25px;
-}
-
-.card {
-    border-radius: 10px;
-}
-
-.card-img-top {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
-
-.card-title {
-    font-size: 1.25rem;
-}
-
-.card-text {
-    font-size: 1rem;
-}
-
-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    padding: 10px 0;
-    background-color: #343a40;
-    color: white;
-}
-
-#services, #locations, #experts {
-    scroll-margin-top: 56px; /* Adjust this if your navbar height is different */
+.container {
+    padding-bottom: 2rem;
 }
