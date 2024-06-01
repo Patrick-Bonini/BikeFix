@@ -41,7 +41,7 @@ body {
 
 .header {
     position: relative;
-    padding: 5rem;
+    padding: 10rem;
     margin: 1rem;
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -53,7 +53,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 0.5;
+    opacity: 0.3;
     top: 0;
     left: 0;
     bottom: 0;
