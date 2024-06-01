@@ -38,13 +38,13 @@ body {
 .navbar {
     padding: 0.5rem 1rem;
 }
-
 .header {
     background-image: url('assets/background.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 10rem 0;
+    padding: 2rem;
+    margin: 1rem;
     position: relative;
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
