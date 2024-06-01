@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.card {
+    border-radius: 10px;
+}
+
+.card-img-top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: white;
+    margin-right: 10px;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: gray;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
