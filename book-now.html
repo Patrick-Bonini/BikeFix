@@ -56,10 +56,11 @@
                         Select Service
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="serviceDropdown">
-                        <li><a class="dropdown-item" href="#">Bike Repair</a></li>
-                        <li><a class="dropdown-item" href="#">Bike Electrification</a></li>
-                        <li><a class="dropdown-item" href="#">E-Scooter Repair</a></li>
+                        <li><button class="dropdown-item" type="button" value="Bike Repair">Bike Repair</button></li>
+                        <li><button class="dropdown-item" type="button" value="Bike Electrification">Bike Electrification</button></li>
+                        <li><button class="dropdown-item" type="button" value="E-Scooter Repair">E-Scooter Repair</button></li>
                     </ul>
+                    <input type="hidden" id="selectedService" name="selectedService" required>
                 </div>
             </div>
             <div class="mb-3">
@@ -70,13 +71,13 @@
                         Select Expert
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="expertDropdown">
-                        <li><a class="dropdown-item" href="#">Andrea</a></li>
-                        <li><a class="dropdown-item" href="#">Danny</a></li>
-                        <li><a class="dropdown-item" href="#">Jay</a></li>
+                        <li><button class="dropdown-item" type="button" value="Andrea">Andrea</button></li>
+                        <li><button class="dropdown-item" type="button" value="Danny">Danny</button></li>
+                        <li><button class="dropdown-item" type="button" value="Jay">Jay</button></li>
                     </ul>
+                    <input type="hidden" id="selectedExpert" name="selectedExpert" required>
                 </div>
-            </div>
-            
+            </div>            
             <div class="mb-3">
                 <label for="date" class="form-label">Preferred Date</label>
                 <input type="date" class="form-control" id="date" required>
