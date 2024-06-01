@@ -25,3 +25,11 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+section {
+    padding: 60px 0;
+}
+
+#services, #locations, #experts {
+    scroll-margin-top: 56px; /* Adjust this if your navbar height is different */
+}

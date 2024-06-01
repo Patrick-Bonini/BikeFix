@@ -1,6 +1,9 @@
-document.addEventListener('DOMContentLoaded', function () {
-    document.querySelector('form').addEventListener('submit', function (event) {
-        event.preventDefault();
-        alert('Appointment confirmed!');
+document.querySelectorAll('a.nav-link').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
     });
 });
