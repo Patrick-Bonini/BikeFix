@@ -118,3 +118,8 @@ select:invalid + .invalid-feedback {
     flex-direction: column;
     min-height: 100%;
 }
+
+.btn-container {
+    display: flex;
+    gap: 10px; 
+}
