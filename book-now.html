@@ -28,6 +28,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="index.html#experts">Experts</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-dark" href="book-now.html">Book Now</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -39,19 +42,18 @@
     </header>
 
     <div class="container">
-        <form action="order-confirmation.html">
+        <form action="order-confirmation.html" method="POST">
             <div class="mb-3">
                 <label for="name" class="form-label">Name</label>
-                <input type="text" class="form-control" id="name" required>
+                <input type="text" class="form-control" id="name" name="name" required>
             </div>
             <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" required>
+                <input type="email" class="form-control" id="email" name="email" required>
             </div>
             <div class="mb-3">
-                <label for="service" class="form-label">Service</label>
-                <select class="form-control" id="service" required>
-                    <option value="">Select Service</option>
+                <label for="services" class="form-label">Services</label>
+                <select class="form-control" id="services" name="services[]" multiple required>
                     <option value="Bike Repair">Bike Repair</option>
                     <option value="Bike Electrification">Bike Electrification</option>
                     <option value="E-Scooter Repair">E-Scooter Repair</option>
@@ -59,7 +61,7 @@
             </div>
             <div class="mb-3">
                 <label for="expert" class="form-label">Expert</label>
-                <select class="form-control" id="expert" required>
+                <select class="form-control" id="expert" name="expert" required>
                     <option value="">Select Expert</option>
                     <option value="Andrea">Andrea</option>
                     <option value="Danny">Danny</option>
@@ -68,7 +70,15 @@
             </div>
             <div class="mb-3">
                 <label for="date" class="form-label">Preferred Date</label>
-                <input type="date" class="form-control" id="date" required>
+                <input type="date" class="form-control" id="date" name="date" required>
+            </div>
+            <div class="mb-3">
+                <label for="pickup-time" class="form-label">Pickup Time</label>
+                <input type="time" class="form-control" id="pickup-time" name="pickup_time" required>
+            </div>
+            <div class="mb-3">
+                <label for="dropoff-time" class="form-label">Dropoff Time</label>
+                <input type="time" class="form-control" id="dropoff-time" name="dropoff_time" required>
             </div>
             <button type="submit" class="btn btn-dark">Book Now</button>
         </form>
