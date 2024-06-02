@@ -63,6 +63,15 @@
                         <input type="text" class="form-control" id="bike1-issue" name="bike1_issue" required>
                     </div>
                     <div class="mb-3">
+                        <label for="bike1-service" class="form-label">Service</label>
+                        <select class="form-control" id="bike1-service" name="bike1_service" required>
+                            <option value="">Select Service</option>
+                            <option value="Bike Repair">Bike Repair</option>
+                            <option value="Bike Electrification">Bike Electrification</option>
+                            <option value="E-Scooter Repair">E-Scooter Repair</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
                         <label for="bike1-preferred-date" class="form-label">Preferred Date</label>
                         <input type="date" class="form-control" id="bike1-preferred-date" name="bike1_preferred_date" required>
                     </div>
@@ -83,6 +92,7 @@
                         <label for="bike1-dropoff-time" class="form-label">Dropoff Time</label>
                         <input type="time" class="form-control" id="bike1-dropoff-time" name="bike1_dropoff_time" required>
                     </div>
+                    <button type="button" class="btn btn-danger remove-bike-btn">Remove Bike</button>
                 </div>
             </div>
             <button type="button" class="btn btn-secondary mb-3" id="add-bike-btn">Add Another Bike</button>
@@ -113,6 +123,15 @@
                     <input type="text" class="form-control" id="bike${bikeCount}-issue" name="bike${bikeCount}_issue" required>
                 </div>
                 <div class="mb-3">
+                    <label for="bike${bikeCount}-service" class="form-label">Service</label>
+                    <select class="form-control" id="bike${bikeCount}-service" name="bike${bikeCount}_service" required>
+                        <option value="">Select Service</option>
+                        <option value="Bike Repair">Bike Repair</option>
+                        <option value="Bike Electrification">Bike Electrification</option>
+                        <option value="E-Scooter Repair">E-Scooter Repair</option>
+                    </select>
+                </div>
+                <div class="mb-3">
                     <label for="bike${bikeCount}-preferred-date" class="form-label">Preferred Date</label>
                     <input type="date" class="form-control" id="bike${bikeCount}-preferred-date" name="bike${bikeCount}_preferred_date" required>
                 </div>
@@ -133,10 +152,32 @@
                     <label for="bike${bikeCount}-dropoff-time" class="form-label">Dropoff Time</label>
                     <input type="time" class="form-control" id="bike${bikeCount}-dropoff-time" name="bike${bikeCount}_dropoff_time" required>
                 </div>
+                <button type="button" class="btn btn-danger remove-bike-btn">Remove Bike</button>
             `;
 
             bikesContainer.appendChild(newBikeDetails);
+            addRemoveBikeEvent();
         });
+
+        function addRemoveBikeEvent() {
+            const removeButtons = document.querySelectorAll('.remove-bike-btn');
+            removeButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    this.parentElement.remove();
+                    updateBikeHeaders();
+                });
+            });
+        }
+
+        function updateBikeHeaders() {
+            const bikes = document.querySelectorAll('.bike-details');
+            bikes.forEach((bike, index) => {
+                const bikeHeader = bike.querySelector('h5');
+                bikeHeader.textContent = `Bike ${index + 1}`;
+            });
+        }
+
+        addRemoveBikeEvent();
     </script>
 </body>
 
